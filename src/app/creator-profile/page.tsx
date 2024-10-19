@@ -14,12 +14,12 @@ export default function Home() {
               Dashboard
             </Link>
           </div>
-          <div className="ml-12 text-6xl font-semibold flex flex-row ">
+          <div className="ml-12 text-6xl font-semibold flex flex-row text-gray-400">
           <Link href="/">
               Profile
             </Link>
             
-            <div className="ml-20 text-gray-400">
+            <div className="ml-20 text-black ">
             <Link href="/creator-profile">
               Creator Profile
             </Link>
@@ -27,26 +27,32 @@ export default function Home() {
           </div>
 
           <div className="flex flex-row">
-            <div className = "flex-col flex"> 
-          <div className="ml-20 mt-10 w-full flex-col flex mb-3">Achievement Progress</div>
-            <div className="ml-16 transition-shadow duration-100 ease-in-out">
-              <img 
-              className="hover:shadow-xl rounded-3xl"
-              src="https://i.imgur.com/d5bLLei.png" alt="Image description" />
+
+            <div className="flex-col flex">
+              <div className="ml-16 mt-10 mb-3"> Collection</div>
+              <div className="ml-16 transition-shadow duration-100 ease-in-out">
+                <img 
+                  className="hover:shadow-xl rounded-3xl"
+                  src="https://i.imgur.com/8AHPJsi.png" 
+                  alt="Img"/>
+              </div>
             </div>
-            
-            
-          </div>
-          <div className="flex-col flex">
-            <div className="ml-16 mt-10 mb-3"> Collection</div>
-            <div className="ml-16 hover:shadow-xl transition-shadow duration-100 w-auto ease-in-out">
-              <img src="https://i.imgur.com/3PgJzpL.png" alt="Img" />
+            <div className="flex-col flex ml-8 w-full">
+              <div className="ml-16 mt-10 mb-3"> Your Marketplace</div>
+              <div className="ml-16 transition-shadow duration-100 ease-in-out w-full h-full">
+
+                 {/* Marketplace HEREEE */}
+                <div className="h-full w-[400px] rounded-3xl border-gray-100 border-[3px]">
+
+
+                </div>
+                
+              </div>
             </div>
           </div>
-        </div>
-        
-      </div>
-      </div>
+            </div>
+          </div>
+
       
       
   )
