@@ -5,7 +5,7 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import ProposalForm from "./ProposalForm";
 import ProposalList from "./ProposalList";
-import something from '../../components/ui/writeContract';
+import something  from '../../components/ui/writeContract';
 interface Proposal {
   id: number;
   text: string;
@@ -18,27 +18,30 @@ interface Proposal {
 const initialProposals: Proposal[] = [
   {
     id: 1,
-    text: "Create a Kali Uchis token",
-    votes: { yes: 15, no: 5 },
+    text: "Create a Katy Perry token",
+    votes: { yes: 149, no: 5 },
   },
   {
     id: 2,
-    text: "Create a Lana Del Rey token",
-    votes: { yes: 20, no: 3 },
+    text: "Create a Morgan Wallen token",
+    votes: { yes: 50, no: 13 },
   },
   {
     id: 3,
-    text: "Create a Gracie Abrams token",
-    votes: { yes: 18, no: 7 },
+    text: "Create a Chappell Roan token",
+    votes: { yes: 33, no: 20 },
   },
   {
     id: 4,
     text: "Create a Lil Uzi Vert token",
-    votes: { yes: 25, no: 2 },
+    votes: { yes: 130, no: 9 },
   },
 ];
 
 const Home: React.FC = () => {
+  const deployNewToken = something();
+
+
   const [proposals, setProposals] = useState<Proposal[]>([]);
   const [votedProposals, setVotedProposals] = useState<Record<number, boolean>>(
     {},
@@ -108,17 +111,29 @@ const Home: React.FC = () => {
     });
 
     setProposals((prevProposals) => {
-      const updatedProposals = prevProposals.map((proposal) =>
-        proposal.id === id
-          ? {
-              ...proposal,
-              votes: {
-                ...proposal.votes,
-                [voteType]: proposal.votes[voteType] + 1,
-              },
-            }
-          : proposal,
-      );
+      const updatedProposals = prevProposals.map((proposal) => {
+        if (proposal.id === id) {
+          const updatedProposal = {
+            ...proposal,
+            votes: {
+              ...proposal.votes,
+              [voteType]: proposal.votes[voteType] + 1,
+            },
+          };
+          
+          // Check if total votes exceed 150
+          //const totalVotes = updatedProposal.votes.yes + updatedProposal.votes.no;
+          if (updatedProposal.votes.yes > 150) {
+            // Call the deployNewToken function
+            deployNewToken('Katy Perry', 'KP')
+              .then(() => console.log('New token deployed successfully'))
+              .catch((error) => console.error('Failed to deploy new token:', error));
+          }
+          return updatedProposal;
+        }
+        return proposal;
+      });
+      
       localStorage.setItem("proposals", JSON.stringify(updatedProposals));
       return updatedProposals;
     });
