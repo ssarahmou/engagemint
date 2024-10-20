@@ -1,9 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
+import {Button} from '../../components/ui/button'
+import Tits from "../../components/ui/mintContract";
+
 
 export default function Home() {
+  const mintTokens = Tits();
   const tokenAddress = "0x6ff9dEd9Fb6a95923824e678BFEbd5f32C25a77B";
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -25,6 +29,21 @@ export default function Home() {
     }
   };
 
+  const handleAchievementClick = useCallback(() => {
+    console.log("Achievement button was clicked");
+  
+    try {
+      // Assuming Tits() is the contract instance you're interacting with
+      mintTokens(BigInt(100000000))
+      .then(() => console.log("New token deployed successfully"))
+      .catch((error) =>
+        console.error("Failed to deploy new token:", error),
+      );      
+    } catch (error) {
+      console.error("An unexpected error occurred:", error);
+    }
+  }, []);
+  
   useEffect(() => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
@@ -37,17 +56,20 @@ export default function Home() {
       {/* Clickable White Bar */}
       <div
         ref={buttonRef}
-        className={`w-[108px] h-full border-r-[2px] p-6 border-slate cursor-pointer transition-all duration-300 ${sidebarOpen ? "opacity-0" : "opacity-100"}`}
+        className={`w-[108px] h-full border-r-[2px] p-6 border-slate cursor-pointer transition-all duration-300 ${
+          sidebarOpen ? "opacity-0" : "opacity-100"
+        }`}
         onClick={toggleSidebar}
       >
         <img src="https://i.imgur.com/y6hR1Cf.png" alt="Logo" />
       </div>
-
+  
       {/* Sidebar */}
-
       <div
         ref={sidebarRef}
-        className={`fixed top-0 left-0 h-full w-[400px] border-r-[2px] border-slate bg-gradient-to-t from-[#CCD7FA] to-[#F9F0F8] bg-white p-12 transition-transform duration-300 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}`}
+        className={`fixed top-0 left-0 h-full w-[400px] border-r-[2px] border-slate bg-gradient-to-t from-[#CCD7FA] to-[#F9F0F8] bg-white p-12 transition-transform duration-300 ${
+          sidebarOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
       >
         <div className="font-semibold text-2xl mb-12">
           <Link href="/dashboard" className="text-2xl font-bold">
@@ -78,10 +100,12 @@ export default function Home() {
           Settings
         </div>
       </div>
-
+  
       {/* Main Content */}
       <div
-        className={`w-screen flex flex-col transition-all duration-300 ${sidebarOpen ? "ml-[400px]" : "ml-0"}`}
+        className={`w-screen flex flex-col transition-all duration-300 ${
+          sidebarOpen ? "ml-[400px]" : "ml-0"
+        }`}
       >
         <div
           className={`w-full h-1/6 bg-gradient-to-l from-[#CCD7FA] to-[#F9F0F8] bg-white p-12 font-semibold text-5xl justify-center flex flex-col transition-opacity duration-300`}
@@ -92,7 +116,7 @@ export default function Home() {
         <div className="ml-12 text-6xl font-semibold flex flex-row text-black">
           <Link href="/profile">Profile</Link>
         </div>
-
+  
         <div className="flex flex-row">
           <div className="flex-col flex">
             <div className="ml-20 mt-10 w-full flex-col flex mb-3">
@@ -105,7 +129,19 @@ export default function Home() {
                 alt="Achievement Progress"
               />
             </div>
+  
+            {/* New Button Below Achievement Progress */}
+            <div className="ml-16 mt-5">
+              <Button
+              variant="secondary"
+              className="bg-[#CCD7FA] flex ml-1 mt-1 text-m p-6"
+              onClick={() => handleAchievementClick()}
+            >
+              Show demo
+            </Button>            
+            </div>
           </div>
+  
           <div className="flex-col flex">
             <div className="ml-16 mt-10 mb-3">Collection</div>
             <div className="ml-16 hover:shadow-xl transition-shadow duration-100 w-auto ease-in-out">

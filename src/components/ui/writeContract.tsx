@@ -10,9 +10,11 @@ import { type UseWriteContractParameters } from "wagmi";
 
 export default function Something() {
   const { writeContract } = useWriteContract();
-  console.log("made write contract var");
   const deployToken = async (name: string, ticker: string) => {
+    console.log("made write contract var");
+
     try {
+
       const result = writeContract({
         abi: [
           {

@@ -8,12 +8,15 @@ import {
 } from "wagmi";
 import { type UseWriteContractParameters } from "wagmi";
 
-export default function tits(amount: bigint) {
+export default function Tits() {
   const { writeContract } = useWriteContract();
 
-  writeContract({
-    abi: [
-      {
+  const mintToken = async(amount: bigint) => {
+
+    try { 
+        const result = writeContract({
+        abi: [
+        {
         inputs: [
           {
             internalType: "address",
@@ -398,8 +401,15 @@ export default function tits(amount: bigint) {
         type: "function",
       },
     ],
-    address: "0x7c1f38c4E91117737C69526A7d8690e6E556B03F",
+    address: "0xe037eCaB6C4198b67d7479E2B926183EA39A38F8",
     functionName: "mint",
     args: ["0x83145c8de2ec7f16876eeef954e12f56c6f0e5d1", amount],
   });
+  return result;
+}
+catch(error) {
+    throw error;
+}
+}
+return mintToken;
 }

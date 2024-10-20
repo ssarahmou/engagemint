@@ -1,4 +1,7 @@
 {
   "extends": ["next/core-web-vitals", "next/typescript"],
-  "ignorePatterns": ["node_modules/**/*", "sepolia-testnet-deployment/**/*"]
+  "ignorePatterns": ["node_modules/**/*", "sepolia-testnet-deployment/**/*"],
+  "rules": {
+    "no-unused-vars": "warn"
+  }
 }
