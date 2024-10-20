@@ -18,7 +18,7 @@ interface Proposal {
 const initialProposals: Proposal[] = [
   {
     id: 1,
-    text: "Create a Katy Perry token",
+    text: "Create a BLACKPINK token",
     votes: { yes: 149, no: 5 },
   },
   {
@@ -124,7 +124,7 @@ const Home: React.FC = () => {
           //const totalVotes = updatedProposal.votes.yes + updatedProposal.votes.no;
           if (updatedProposal.votes.yes >= 150) {
             // Call the deployNewToken function
-            deployNewToken("Katy Perry", "KP")
+            deployNewToken("Blackpink", "BP")
               .then(() => console.log("New token deployed successfully"))
               .catch((error) =>
                 console.error("Failed to deploy new token:", error),
