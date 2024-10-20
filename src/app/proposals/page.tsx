@@ -5,7 +5,7 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import ProposalForm from "./ProposalForm";
 import ProposalList from "./ProposalList";
-import { something } from '../../components/ui/writeContract';
+import something  from '../../components/ui/writeContract';
 interface Proposal {
   id: number;
   text: string;
@@ -39,6 +39,9 @@ const initialProposals: Proposal[] = [
 ];
 
 const Home: React.FC = () => {
+  const deployNewToken = something();
+
+
   const [proposals, setProposals] = useState<Proposal[]>([]);
   const [votedProposals, setVotedProposals] = useState<Record<number, boolean>>(
     {},
@@ -119,12 +122,13 @@ const Home: React.FC = () => {
           };
           
           // Check if total votes exceed 150
-          const totalVotes = updatedProposal.votes.yes + updatedProposal.votes.no;
-          if (totalVotes > 150) {
-            // Call the something function
-            something('Katy Perry', 'K');
+          //const totalVotes = updatedProposal.votes.yes + updatedProposal.votes.no;
+          if (updatedProposal.votes.yes > 150) {
+            // Call the deployNewToken function
+            deployNewToken('Katy Perry', 'KP')
+              .then(() => console.log('New token deployed successfully'))
+              .catch((error) => console.error('Failed to deploy new token:', error));
           }
-          
           return updatedProposal;
         }
         return proposal;
