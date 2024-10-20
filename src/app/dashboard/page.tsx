@@ -54,25 +54,49 @@ export default function Home() {
           </Link>
         </div>
         <div className="font-bold text-gray-500 tracking-widest">GENERAL</div>
-        <div className="font-semibold text-black mt-5 text-2xl bg-[#FAF7FC] p-6 rounded-xl stroke-[2px] border-slate border-opacity-95">
-          Dashboard
+
+        <div className="flex-row"> 
+            <img src="https://i.imgur.com/9E8IMIS.png" className="py-12 px-6 absolute"></img>
+            <div className="font-semibold text-black px-16 mt-5 text-2xl bg-[#FAF7FC] p-6 rounded-xl stroke-[2px] border-slate border-opacity-95">
+            Dashboard
+            </div>
         </div>
-        <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">
-          <Link href="/proposals" className="font-semibold">
-            Proposals
-          </Link>
+        
+        <div className="flex-row"> 
+            <img src="https://i.imgur.com/3Xxvo5v.png" className="py-12 px-6 absolute"></img>
+            <div className="font-semibold text-gray-500 px-16 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">
+            <Link href="/proposals" className="font-semibold">
+                Proposals
+            </Link>
+            </div>
         </div>
-        <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100 mb-20">
-          Notifications
+
+        <div className="flex-row">
+            <img src="https://i.imgur.com/hNht7Bf.png" className="py-11 px-6 absolute"></img>
+            <div className="font-semibold text-gray-500 mt-5 px-16 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100 mb-20">
+            <Link href="/redeem" className="font-semibold">
+                Redeem
+            </Link>
+            </div>
         </div>
         <div className="font-bold text-gray-500 tracking-widest">PERSONAL</div>
-        <Link href="/profile">
-          <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">
-            Profile
-          </div>
-        </Link>
-        <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">
-          Settings
+        
+        <div className="flex-row"> 
+            <img src="https://i.imgur.com/hmuO9gS.png" className="py-12 px-6 absolute"></img>
+            <div className="font-semibold text-gray-500 px-16 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">
+            <Link href="/profile" className="font-semibold">
+                Profile
+            </Link>
+            </div>
+        </div>
+
+        <div className="flex-row"> 
+            <img src="https://i.imgur.com/KrBuSA9.png" className="py-12 px-6 absolute"></img>
+            <div className="font-semibold text-gray-500 px-16 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">
+            <Link href="/profile" className="font-semibold">
+                Settings
+            </Link>
+            </div>
         </div>
       </div>
 
@@ -80,7 +104,7 @@ export default function Home() {
         <div className="font-semibold p-16 text-2xl w-full flex flex-row items-center">
           <div>Welcome, Kelly!</div>
           <Button variant = "outline" className="ml-auto pt-3 pl-8 pr-8 pb-3 rounded-full">
-            15.06 ETH
+            1506 Em
           </Button>
         </div>
         <div className="flex flex-row">
@@ -122,7 +146,7 @@ export default function Home() {
             {/* Card 1 */}
             <div className="bg-[#fefdff] rounded-lg shadow-md p-4 min-w-[300px]">
               <div className="text-right text-[#6A8CCA] font-bold text-xl">
-                2B tokens
+                2B Em
               </div>
               <h2 className="mt-2 text-lg font-semibold">Taylor Swift</h2>
               <p className="text-sm font-bold tracking-wider text-gray-500">
@@ -139,7 +163,7 @@ export default function Home() {
             {/* Card 2 */}
             <div className="bg-[#fefdff] rounded-lg shadow-md p-4 min-w-[300px]">
               <div className="text-right text-[#6A8CCA] font-bold text-xl">
-                1.7B tokens
+                1.7B Em
               </div>
               <h2 className="mt-2 text-lg font-semibold">Olivia Rodrigo</h2>
               <p className="text-sm font-bold tracking-wider text-gray-500">
@@ -156,7 +180,7 @@ export default function Home() {
             {/* Card 3 */}
             <div className="bg-[#fefdff] rounded-lg shadow-md p-4 min-w-[300px]">
               <div className="text-right text-[#6A8CCA] font-bold text-xl">
-                1B tokens
+                1B Em
               </div>
               <h2 className="mt-2 text-lg font-semibold">Bruno Mars</h2>
               <p className="text-sm font-bold tracking-wider text-gray-500">
@@ -173,7 +197,7 @@ export default function Home() {
             {/* Card 3 */}
             <div className="bg-[#fefdff] rounded-lg shadow-md p-4 min-w-[300px]">
               <div className="text-right text-[#6A8CCA] font-bold text-xl">
-                927K tokens
+                927K Em
               </div>
               <h2 className="mt-2 text-lg font-semibold">Katy Perry</h2>
               <p className="text-sm font-bold tracking-wider text-gray-500">
@@ -193,7 +217,7 @@ export default function Home() {
             {/* Card 1 */}
             <div className="bg-[#fefdff] rounded-lg shadow-md p-4 mb-16 min-w-[300px]">
               <div className="text-right text-[#6A8CCA] font-bold text-xl">
-                862k tokens
+                862k Em
               </div>
               <h2 className="mt-2 text-lg font-semibold">Travis Scott</h2>
               <p className="text-sm font-bold tracking-wider text-gray-500">
@@ -210,7 +234,7 @@ export default function Home() {
             {/* Card 2 */}
             <div className="bg-[#fefdff] rounded-lg shadow-md p-4 mb-16 min-w-[300px]">
               <div className="text-right text-[#6A8CCA] font-bold text-xl">
-                512k tokens
+                512k Em
               </div>
               <h2 className="mt-2 text-lg font-semibold">Sabrina Carpenter</h2>
               <p className="text-sm font-bold tracking-wider text-gray-500">
@@ -227,7 +251,7 @@ export default function Home() {
             {/* Card 3 */}
             <div className="bg-[#fefdff] rounded-lg shadow-md p-4 min-w-[300px] mb-16">
               <div className="text-right text-[#6A8CCA] font-bold text-xl">
-                635k tokens
+                635k Em
               </div>
               <h2 className="mt-2 text-lg font-semibold">Drake</h2>
               <p className="text-sm font-bold tracking-wider text-gray-500">
@@ -244,7 +268,7 @@ export default function Home() {
             {/* Card 3 */}
             <div className="bg-[#fefdff] rounded-lg shadow-md min-w-[300px] p-4 mb-16">
               <div className="text-right text-[#6A8CCA] font-bold text-xl">
-                263k tokens
+                263k Em
               </div>
               <h2 className="mt-2 text-lg font-semibold">Daft Punk</h2>
               <p className="text-sm font-bold tracking-wider text-gray-500">
