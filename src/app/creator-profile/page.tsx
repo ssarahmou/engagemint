@@ -4,6 +4,7 @@ export default function Home() {
   return (
     // Profile
     <div className="flex flex-row h-screen font-inter-tight">
+      
       <div className="w-[108px] h-full border-r-[2px] border-slate"></div>
         <div className="w-screen flex flex-col">
           <div className="w-full h-1/6 bg-gradient-to-l from-[#CCD7FA] to-[#F9F0F8] bg-white p-12 font-semibold text-5xl justify-center flex flex-col">

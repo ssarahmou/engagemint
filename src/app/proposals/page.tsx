@@ -28,21 +28,34 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex min-h-screen">
       {/* Navigation Bar */}
-      <nav className="bg-blue-600 text-white p-4">
-        <div className="container mx-auto flex justify-between items-center">
+      <div className="w-[400px] h-screen flex flex-col border-r-[2px] border-slate bg-gradient-to-t from-[#CCD7FA] to-[#F9F0F8] bg-white p-12 overflow-y-auto">
+        <div className="font-semibold text-2xl mb-12">
           <Link href="/" className="text-2xl font-bold">
             Engagemint
           </Link>
-          <Link href="/" className="hover:underline">
-            Home
+        </div>
+        <div className="font-bold text-gray-500 tracking-widest">GENERAL</div>
+        <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">
+          <Link href="/dashboard">Dashboard</Link>
+        </div>
+        <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">Collection</div>
+        <div className="font-semibold text-black mt-5 text-2xl bg-[#FAF7FC] p-6 rounded-xl stroke-[2px] border-slate border-opacity-95">
+          <Link href="/proposals" className="hover:underline font-semibold">
+            Proposals
           </Link>
         </div>
-      </nav>
+        <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100 mb-20">Notifications</div>
+        <div className="font-bold text-gray-500 tracking-widest">PERSONAL</div>
+        <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">Profile</div>
+        <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">Settings</div>
+      </div>
+      
 
       {/* Main Content */}
-      <main className="flex-grow container mx-auto p-4">
+
+      <main className="flex-grow p-12 overflow-y-auto">
         <h1 className="text-2xl font-bold mb-4">Voting App</h1>
         <ProposalForm onAddProposal={addProposal} />
         <ProposalList proposals={proposals} onVote={handleVote} />

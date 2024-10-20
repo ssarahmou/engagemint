@@ -26,11 +26,7 @@ export default function Home() {
           </nav>
 
           <div className="ml-12 mt-12 mb-5 underline text-gray-400 flex-col stroke-[D9D9D9]">
-          <Link href="/proposals"> 
-          Proposals</Link>
-          <Link href="/dashboard">
-              Dashboard
-            </Link>
+          
           </div>
           <div className="ml-12 text-6xl font-semibold flex flex-row ">
           <Link href="/">
