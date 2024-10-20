@@ -5,7 +5,7 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import ProposalForm from "./ProposalForm";
 import ProposalList from "./ProposalList";
-
+import something from '../../components/ui/writeContract';
 interface Proposal {
   id: number;
   text: string;

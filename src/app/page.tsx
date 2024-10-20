@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
+import { writeContract } from "viem/actions";
 
 export default function Home() {
 
   const tokenAddress = '0x6ff9dEd9Fb6a95923824e678BFEbd5f32C25a77B'
-
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
