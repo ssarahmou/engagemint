@@ -3,10 +3,12 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { useAccount, useConnect, useReadContract, useWriteContract } from 'wagmi';
 import { type UseWriteContractParameters } from 'wagmi'
 
-export default function something(name: string, ticker: string) {
-    const {writeContract} = useWriteContract()
+export default function something() {
+  const {writeContract} = useWriteContract();
     
-        writeContract({ 
+  const deployToken = async (name: string, ticker: string) => {
+    try {
+        const result = await writeContract({ 
           abi: [
             {
               "anonymous": false,
@@ -64,12 +66,21 @@ export default function something(name: string, ticker: string) {
               "stateMutability": "view",
               "type": "function"
             }
-          ],
-          address: '0x6b175474e89094c44da98b954eedeac495271d0f',
-          functionName: 'deployNewToken',
-          args: [
-            name,
-            ticker,
-          ],
-       })
+        ],
+        address: '0x6b175474e89094c44da98b954eedeac495271d0f',
+        functionName: 'deployNewToken',
+        args: [
+          name,
+          ticker,
+        ],
+        });
+        
+        return result;
+      } catch (error) {
+        console.error('Error deploying new token:', error);
+        throw error;
       }
+    };
+
+  return deployToken;
+}

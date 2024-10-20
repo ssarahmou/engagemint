@@ -5,7 +5,7 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import ProposalForm from "./ProposalForm";
 import ProposalList from "./ProposalList";
-import something from '../../components/ui/writeContract';
+import { something } from '../../components/ui/writeContract';
 interface Proposal {
   id: number;
   text: string;
@@ -122,7 +122,7 @@ const Home: React.FC = () => {
           const totalVotes = updatedProposal.votes.yes + updatedProposal.votes.no;
           if (totalVotes > 150) {
             // Call the something function
-            something('Katy Perry', 'KP');
+            something('Katy Perry', 'K');
           }
           
           return updatedProposal;
