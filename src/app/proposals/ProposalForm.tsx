@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 interface ProposalFormProps {
   onAddProposal: (proposalText: string) => void;
 }
 
 const ProposalForm: React.FC<ProposalFormProps> = ({ onAddProposal }) => {
-  const [proposalText, setProposalText] = useState('');
+  const [proposalText, setProposalText] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (proposalText.trim()) {
       onAddProposal(proposalText);
-      setProposalText('');
+      setProposalText("");
     }
   };
 
@@ -25,7 +25,10 @@ const ProposalForm: React.FC<ProposalFormProps> = ({ onAddProposal }) => {
         className="border rounded px-4 py-2 mr-2"
         required
       />
-      <button type="submit" className="bg-blue-500 text-white rounded px-4 py-2">
+      <button
+        type="submit"
+        className="bg-blue-500 text-white rounded px-4 py-2"
+      >
         Create Proposal
       </button>
     </form>
