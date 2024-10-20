@@ -1,4 +1,6 @@
-"use client"
+"use client";
+import Image from 'next/image';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import Link from 'next/link';
 import * as React from "react";
@@ -15,8 +17,6 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-//import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-//import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 export function SearchInput() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -104,17 +104,25 @@ export default function Home() {
         </div>
         
         {/* ESPN */}
-        <div className="flex pl-16 pt-6 space-x-8 mr-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8">
           {/* Card 1 */}
-          <div className="bg-[#FAF7FC] rounded-lg shadow-md p-4 ">
-            <div className="text-right text-[#6A8CCA] font-bold text-xl">+100 pts</div>
-            <h2 className="mt-2 text-lg font-semibold">NBA Frenzy</h2>
-            <p className="text-sm font-bold tracking-wider text-gray-500">100 GAMES WATCHED ON ESPN</p>
-            <div className="mt-4 bg-gray-200 h-32 rounded-md"></div>
-            <button className="mt-4 w-full bg-[#6A8CCA] text-white py-2 rounded-md hover:bg-blue-700">
-              Redeem Points
-            </button>
-          </div>
+          <Card className="bg-white border-2 border-yellow-400 rounded-lg overflow-hidden">
+            <CardHeader className="p-4">
+              <div className="flex items-center space-x-2">
+                
+                <CardTitle className="text-sm font-semibold">@taylorswift</CardTitle>
+              </div>
+            </CardHeader>
+            <CardContent className="p-4">
+              <div className="w-full h-24 bg-gray-200 mb-4 rounded-md"></div>
+              <h2 className="text-lg font-bold mb-2">Most Popular Artist</h2>
+              <p className="text-sm text-gray-600 mb-2">10 MILLION STREAMS ON YOUTUBE</p>
+              <div className="text-sm text-gray-500">
+                <p>Current Stream Volume: 1B+</p>
+                <p>Votes in Counting: 1B+</p>
+              </div>
+            </CardContent>
+          </Card>
 
           {/* Card 2 */}
           <div className="bg-[#FAF7FC] rounded-lg shadow-md p-4 ">

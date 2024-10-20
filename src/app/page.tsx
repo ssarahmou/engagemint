@@ -42,13 +42,22 @@ export default function Home() {
         ref={sidebarRef}
         className={`fixed top-0 left-0 h-full w-[400px] border-r-[2px] border-slate bg-gradient-to-t from-[#CCD7FA] to-[#F9F0F8] bg-white p-12 transition-transform duration-300 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'}`}
       >
-        <div className="font-semibold text-2xl mb-12">Engagemint</div>
+        <div className="font-semibold text-2xl mb-12">
+          <Link href="/" className="text-2xl font-bold">
+            Engagemint
+          </Link>
+        </div>
         <div className="font-bold text-gray-500 tracking-widest">GENERAL</div>
         <Link href="/dashboard">
-          <div className="font-semibold mt-5 text-2xl hover:bg-[#FAF7FC] p-6 text-gray-500 rounded-xl border-slate border-opacity-95">Dashboard</div>
+          <div className="font-semibold mt-5 text-2xl hover:bg-[#FAF7FC] p-6 text-gray-500 rounded-xl border-slate border-opacity-95">
+            <Link href="/dashboard">Dashboard</Link>
+          </div>
         </Link>
-        <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] p-6 rounded-xl border-slate border-opacity-100">Collection</div>
-        <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] p-6 rounded-xl border-slate border-opacity-100">Proposals</div>
+        <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] p-6 rounded-xl border-slate border-opacity-100">
+          <Link href="/proposals" className="font-semibold">
+            Proposals
+          </Link>
+        </div>
         <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] p-6 rounded-xl border-slate border-opacity-100 mb-20">Notifications</div>
         <div className="font-bold text-gray-500 tracking-widest">PERSONAL</div>
         <Link href="/">
@@ -57,13 +66,14 @@ export default function Home() {
         <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] p-6 rounded-xl border-slate border-opacity-100">Settings</div>
       </div>
 
+     
       {/* Main Content */}
       <div className={`w-screen flex flex-col transition-all duration-300 ${sidebarOpen ? 'ml-[400px]' : 'ml-0'}`}>
         <div className={`w-full h-1/6 bg-gradient-to-l from-[#CCD7FA] to-[#F9F0F8] bg-white p-12 font-semibold text-5xl justify-center flex flex-col transition-opacity duration-300`}>
           Engagemint
         </div>
         <div className="ml-12 mt-12 mb-5 underline text-gray-400 flex-col">
-          <Link href="/dashboard">Dashboard</Link>
+         
         </div>
         <div className="ml-12 text-6xl font-semibold flex flex-row text-black">
           <Link href="/">Profile</Link>
