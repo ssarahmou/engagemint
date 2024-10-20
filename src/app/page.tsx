@@ -4,9 +4,14 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 
 export default function Home() {
+
+  const tokenAddress = '0x6ff9dEd9Fb6a95923824e678BFEbd5f32C25a77B'
+
+
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLDivElement>(null);
+
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -29,6 +34,7 @@ export default function Home() {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
 
   return (
     <div className="flex flex-row h-screen font-inter-tight">
