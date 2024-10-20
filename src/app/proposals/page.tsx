@@ -198,7 +198,6 @@ const Home: React.FC = () => {
       </div>
 
       {/* Main Content */}
-
       <main className="flex-grow p-12 overflow-y-auto">
         <h1 className="text-4xl font-bold mb-8">Proposals</h1>
         <ProposalForm onAddProposal={addProposal} />
