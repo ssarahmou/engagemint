@@ -10,10 +10,11 @@ export function Providers({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
-  return (
-    <WagmiProvider config={config}>
-      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+}> ) {
+    return <WagmiProvider config={config}>
+        <QueryClientProvider client={queryClient}>
+          {children}
+        </QueryClientProvider>
     </WagmiProvider>
-  );
+
 }
