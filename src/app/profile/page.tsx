@@ -77,27 +77,51 @@ export default function Home() {
           </Link>
         </div>
         <div className="font-bold text-gray-500 tracking-widest">GENERAL</div>
-        <Link href="/dashboard">
-          <div className="font-semibold mt-5 text-2xl hover:bg-[#FAF7FC] p-6 text-gray-500 rounded-xl border-slate border-opacity-95">
-            <Link href="/dashboard">Dashboard</Link>
-          </div>
-        </Link>
-        <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] p-6 rounded-xl border-slate border-opacity-100">
-          <Link href="/proposals" className="font-semibold">
-            Proposals
-          </Link>
+
+        <div className="flex-row"> 
+            <img src="https://i.imgur.com/sJHPQq6.png" className="py-7 px-6 absolute"></img>
+            <div className="font-semibold text-gray-500 px-16 mt-5 text-2xl  hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl stroke-[2px] border-slate border-opacity-95">
+            <Link href="/dashboard" className="font-semibold">
+                Dashboard
+            </Link>
+            </div>
         </div>
-        <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] p-6 rounded-xl border-slate border-opacity-100 mb-20">
-          Notifications
+        
+        <div className="flex-row"> 
+            <img src="https://i.imgur.com/3Xxvo5v.png" className="py-7 px-6 absolute"></img>
+            <div className="font-semibold text-gray-500 px-16 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">
+            <Link href="/proposals" className="font-semibold">
+                Proposals
+            </Link>
+            </div>
+        </div>
+
+        <div className="flex-row">
+            <img src="https://i.imgur.com/hNht7Bf.png" className="py-6 px-6 absolute"></img>
+            <div className="font-semibold text-gray-500 mt-5 px-16 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100 mb-20">
+            <Link href="/redeem" className="font-semibold">
+                Redeem
+            </Link>
+            </div>
         </div>
         <div className="font-bold text-gray-500 tracking-widest">PERSONAL</div>
-        <Link href="/profile">
-          <div className="font-semibold mt-5 text-2xl bg-[#FAF7FC] text-black hover:bg-[#FAF7FC] p-6 rounded-xl border-slate border-opacity-100">
-            Profile
-          </div>
-        </Link>
-        <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] p-6 rounded-xl border-slate border-opacity-100">
-          Settings
+        
+        <div className="flex-row"> 
+            <img src="https://i.imgur.com/dsgbmYo.png" className="py-7 px-6 absolute"></img>
+            <div className="font-semibold text-black px-16 mt-5 text-2xl bg-[#FAF7FC] p-6 rounded-xl border-slate border-opacity-100">
+            <Link href="/profile" className="font-semibold">
+                Profile
+            </Link>
+            </div>
+        </div>
+
+        <div className="flex-row"> 
+            <img src="https://i.imgur.com/KrBuSA9.png" className="py-7 px-6 absolute"></img>
+            <div className="font-semibold text-gray-500 px-16 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">
+            <Link href="/profile" className="font-semibold">
+                Settings
+            </Link>
+            </div>
         </div>
       </div>
   
