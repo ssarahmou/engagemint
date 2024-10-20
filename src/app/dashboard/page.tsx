@@ -43,7 +43,7 @@ export default function Home() {
 
   return (
     // Profile
-    <div className="flex flex-row h-screen font-inter-tight">
+    <div className="flex flex-row h-screen font-inter-tight transition-shadow duration-100 ease-in-out">
       {/* Navbar */}
       <div className="w-[400px] h-full flex flex-col border-r-[2px] border-slate bg-gradient-to-t from-[#CCD7FA] to-[#F9F0F8] bg-white p-12 fixed ">
         <div className="font-semibold text-2xl mb-12">Engagemint</div>
@@ -53,8 +53,9 @@ export default function Home() {
         <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">Proposals</div>
         <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100 mb-20">Notifications</div>
         <div className="font-bold text-gray-500 tracking-widest">PERSONAL</div>
-        <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-opacity-100">Dashboard</div>
+        <Link href="/">
         <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">Profile</div>
+        </Link>
         <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">Settings</div>
       </div>
     
@@ -98,7 +99,7 @@ export default function Home() {
         {/* ESPN */}
         <div className="flex pl-16 pt-6 space-x-8 mr-auto">
       {/* Card 1 */}
-      <div className="bg-[#FAF7FC] rounded-lg shadow-md p-4 ">
+      <div className="bg-[#FAF7FC] rounded-lg shadow-md p-4 min-w-[300px]">
         <div className="text-right text-[#6A8CCA] font-bold text-xl">+100 pts</div>
         <h2 className="mt-2 text-lg font-semibold">NBA Frenzy</h2>
         <p className="text-sm font-bold tracking-wider text-gray-500">100 GAMES WATCHED ON ESPN</p>
@@ -109,7 +110,7 @@ export default function Home() {
       </div>
 
       {/* Card 2 */}
-      <div className="bg-[#FAF7FC] rounded-lg shadow-md p-4 ">
+      <div className="bg-[#FAF7FC] rounded-lg shadow-md p-4 min-w-[300px]">
         <div className="text-right text-[#6A8CCA] font-bold text-xl">+100 pts</div>
         <h2 className="mt-2 text-lg font-semibold">MLB Marathon</h2>
         <p className="text-sm font-bold tracking-wider text-gray-500">100 GAMES WATCHED ON ESPN</p>
@@ -120,7 +121,7 @@ export default function Home() {
       </div>
 
       {/* Card 3 */}
-      <div className="bg-[#FAF7FC] rounded-lg shadow-md p-4">
+      <div className="bg-[#FAF7FC] rounded-lg shadow-md p-4 min-w-[300px]">
         <div className="text-right text-[#6A8CCA] font-bold text-xl">+100 pts</div>
         <h2 className="mt-2 text-lg font-semibold">NFL Frenzy</h2>
         <p className="text-sm font-bold tracking-wider text-gray-500">100 GAMES WATCHED ON ESPN</p>
@@ -132,7 +133,7 @@ export default function Home() {
       
 
                   {/* Card 3 */}
-                  <div className="bg-[#FAF7FC] rounded-lg shadow-md p-4">
+                  <div className="bg-[#FAF7FC] rounded-lg shadow-md p-4 min-w-[300px]">
         <div className="text-right text-[#6A8CCA] font-bold text-xl">+100 pts</div>
         <h2 className="mt-2 text-lg font-semibold">Golf Grand Slam</h2>
         <p className="text-sm font-bold tracking-wider text-gray-500">100 ROUNDS WATCHED ON ESPN</p>
@@ -143,7 +144,7 @@ export default function Home() {
       </div>
 
                   {/* Card 3 */}
-                  <div className="bg-[#FAF7FC] rounded-lg shadow-md p-4">
+                  <div className="bg-[#FAF7FC] rounded-lg shadow-md p-4 min-w-[300px]">
         <div className="text-right text-[#6A8CCA] font-bold text-xl">+100 pts</div>
         <h2 className="mt-2 text-lg font-semibold">Soccer Showdown</h2>
         <p className="text-sm font-bold tracking-wider text-gray-500">100 MATCHES WATCHED ON ESPN</p>
@@ -161,10 +162,10 @@ export default function Home() {
         {/* ESPN */}
         <div className="flex pl-16 pt-6 space-x-8 mr-auto">
       {/* Card 1 */}
-      <div className="bg-[#FAF7FC] rounded-lg shadow-md p-4 mb-16">
+      <div className="bg-[#FAF7FC] rounded-lg shadow-md p-4 mb-16 min-w-[300px]">
         <div className="text-right text-[#6A8CCA] font-bold text-xl">+100 pts</div>
-        <h2 className="mt-2 text-lg font-semibold">Soccer Showdown</h2>
-        <p className="text-sm font-bold tracking-wider text-gray-500">100 MATCHES WATCHED ON ESPN</p>
+        <h2 className="mt-2 text-lg font-semibold">Binge-Watching Champion</h2>
+        <p className="text-sm font-bold tracking-wider text-gray-500">100 EPISODES WATCHED ON NETFLIX</p>
         <div className="mt-4 bg-gray-200 h-32 rounded-md"></div>
         <button className="mt-4 w-full bg-[#6A8CCA] text-white py-2 rounded-md hover:bg-blue-700">
           Redeem Points
@@ -172,10 +173,10 @@ export default function Home() {
       </div>
 
       {/* Card 2 */}
-      <div className="bg-[#FAF7FC] rounded-lg shadow-md p-4 mb-16">
+      <div className="bg-[#FAF7FC] rounded-lg shadow-md p-4 mb-16 min-w-[300px]">
         <div className="text-right text-[#6A8CCA] font-bold text-xl">+100 pts</div>
-        <h2 className="mt-2 text-lg font-semibold">Soccer Showdown</h2>
-        <p className="text-sm font-bold tracking-wider text-gray-500">100 MATCHES WATCHED ON ESPN</p>
+        <h2 className="mt-2 text-lg font-semibold">Series Completionist</h2>
+        <p className="text-sm font-bold tracking-wider text-gray-500">50 SERIES COMPLETED ON NETFLIX</p>
         <div className="mt-4 bg-gray-200 h-32 rounded-md"></div>
         <button className="mt-4 w-full bg-[#6A8CCA] text-white py-2 rounded-md hover:bg-blue-700">
           Redeem Points
@@ -183,10 +184,10 @@ export default function Home() {
       </div>
 
       {/* Card 3 */}
-      <div className="bg-[#FAF7FC] rounded-lg shadow-md p-4 mb-16">
+      <div className="bg-[#FAF7FC] rounded-lg shadow-md p-4 min-w-[300px] mb-16">
         <div className="text-right text-[#6A8CCA] font-bold text-xl">+100 pts</div>
-        <h2 className="mt-2 text-lg font-semibold">Soccer Showdown</h2>
-        <p className="text-sm font-bold tracking-wider text-gray-500">100 MATCHES WATCHED ON ESPN</p>
+        <h2 className="mt-2 text-lg font-semibold">Romance Lover</h2>
+        <p className="text-sm font-bold tracking-wider text-gray-500">WATCH 100 ROMANCE MOVIES</p>
         <div className="mt-4 bg-gray-200 h-32 rounded-md"></div>
         <button className="mt-4 w-full bg-[#6A8CCA] text-white py-2 rounded-md hover:bg-blue-700">
           Redeem Points
@@ -195,26 +196,16 @@ export default function Home() {
       
 
                   {/* Card 3 */}
-                  <div className="bg-[#FAF7FC] rounded-lg shadow-md p-4 mb-16">
+                  <div className="bg-[#FAF7FC] rounded-lg shadow-md min-w-[300px] p-4 mb-16">
         <div className="text-right text-[#6A8CCA] font-bold text-xl">+100 pts</div>
-        <h2 className="mt-2 text-lg font-semibold">Soccer Showdown</h2>
-        <p className="text-sm font-bold tracking-wider text-gray-500">100 MATCHES WATCHED ON ESPN</p>
+        <h2 className="mt-2 text-lg font-semibold">COMEDY CENTRAL</h2>
+        <p className="text-sm font-bold tracking-wider text-gray-500">100 COMEDY SHOWS / MOVIES</p>
         <div className="mt-4 bg-gray-200 h-32 rounded-md"></div>
         <button className="mt-4 w-full bg-[#6A8CCA] text-white py-2 rounded-md hover:bg-blue-700">
           Redeem Points
         </button>
       </div>
 
-                  {/* Card 3 */}
-                  <div className="bg-[#FAF7FC] rounded-lg shadow-md p-4 mb-16">
-        <div className="text-right text-[#6A8CCA] font-bold text-xl">+100 pts</div>
-        <h2 className="mt-2 text-lg font-semibold">Soccer Showdown</h2>
-        <p className="text-sm font-bold tracking-wider text-gray-500">100 MATCHES WATCHED ON ESPN</p>
-        <div className="mt-4 bg-gray-200 h-32 rounded-md"></div>
-        <button className="mt-4 w-full bg-[#6A8CCA] text-white py-2 rounded-md hover:bg-blue-700">
-          Redeem Points
-        </button>
-      </div>
       
       </div>
         <div className="pl-16 font-semibold text-xl underline">
