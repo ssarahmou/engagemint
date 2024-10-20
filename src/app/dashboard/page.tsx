@@ -24,10 +24,7 @@ export function SearchInput() {
   };
 
   return (
-    <form
-      onSubmit={handleSearch}
-      className="flex w-full space-x-2 ml-auto "
-    >
+    <form onSubmit={handleSearch} className="flex w-full space-x-2 ml-auto ">
       <div className="flex-grow "></div>
       <Input
         type="text"
@@ -36,8 +33,16 @@ export function SearchInput() {
         onChange={(e) => setSearchTerm(e.target.value)}
         className="text-xl flex-grow py-12 rounded-full px-24 bg-gray-100" // Makes the input take available space and increases its thickness
       />
-      <img src="https://i.imgur.com/XaJCpJN.png" className="absolute px-12 py-9"></img>
-      <Button type="submit" className="absolute right-40 mt-4 py-8 px-16 rounded-full">Search</Button>
+      <img
+        src="https://i.imgur.com/XaJCpJN.png"
+        className="absolute px-12 py-9"
+      ></img>
+      <Button
+        type="submit"
+        className="absolute right-40 mt-4 py-8 px-16 rounded-full"
+      >
+        Search
+      </Button>
     </form>
   );
 }
@@ -79,7 +84,10 @@ export default function Home() {
       <div className="flex-grow p-12 overflow-y-auto">
         <div className="font-semibold p-16 text-2xl w-full flex flex-row items-center">
           <div>Welcome, Kelly!</div>
-          <Button variant = "outline" className="ml-auto pt-3 pl-8 pr-8 pb-3 rounded-full">
+          <Button
+            variant="outline"
+            className="ml-auto pt-3 pl-8 pr-8 pb-3 rounded-full"
+          >
             15.06 ETH
           </Button>
         </div>
@@ -90,8 +98,12 @@ export default function Home() {
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <div className="pt-16 pl-16 mt-4 ml-2">
-                <Button variant="outline" className="mr-4 text-lg">Filter
-                  <img src="https://i.imgur.com/iSSFH8t.png" className="ml-2"></img>
+                <Button variant="outline" className="mr-4 text-lg">
+                  Filter
+                  <img
+                    src="https://i.imgur.com/iSSFH8t.png"
+                    className="ml-2"
+                  ></img>
                 </Button>
               </div>
             </DropdownMenuTrigger>
@@ -115,7 +127,9 @@ export default function Home() {
         <div className="pt-8 ml-16 w-11/12">
           <SearchInput />
 
-            <div className="font-bold tracking-widest text-gray-400 mt-12">POPULAR</div>
+          <div className="font-bold tracking-widest text-gray-400 mt-12">
+            POPULAR
+          </div>
 
           {/* ESPN */}
           <div className="flex pl-2 pt-6 space-x-8 mr-auto">

@@ -5,7 +5,7 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import ProposalForm from "./ProposalForm";
 import ProposalList from "./ProposalList";
-import Something  from '../../components/ui/writeContract';
+import Something from "../../components/ui/writeContract";
 interface Proposal {
   id: number;
   text: string;
@@ -41,7 +41,6 @@ const initialProposals: Proposal[] = [
 const Home: React.FC = () => {
   const deployNewToken = Something();
 
-
   const [proposals, setProposals] = useState<Proposal[]>([]);
   const [votedProposals, setVotedProposals] = useState<Record<number, boolean>>(
     {},
@@ -62,11 +61,11 @@ const Home: React.FC = () => {
       localStorage.removeItem("votedProposals");
     };
 
-    window.addEventListener('beforeunload', handleBeforeUnload);
+    window.addEventListener("beforeunload", handleBeforeUnload);
 
     // Cleanup function
     return () => {
-      window.removeEventListener('beforeunload', handleBeforeUnload);
+      window.removeEventListener("beforeunload", handleBeforeUnload);
     };
   }, []);
   /*
@@ -120,20 +119,22 @@ const Home: React.FC = () => {
               [voteType]: proposal.votes[voteType] + 1,
             },
           };
-          
+
           // Check if total votes exceed 150
           //const totalVotes = updatedProposal.votes.yes + updatedProposal.votes.no;
           if (updatedProposal.votes.yes > 150) {
             // Call the deployNewToken function
-            deployNewToken('Katy Perry', 'KP')
-              .then(() => console.log('New token deployed successfully'))
-              .catch((error) => console.error('Failed to deploy new token:', error));
+            deployNewToken("Katy Perry", "KP")
+              .then(() => console.log("New token deployed successfully"))
+              .catch((error) =>
+                console.error("Failed to deploy new token:", error),
+              );
           }
           return updatedProposal;
         }
         return proposal;
       });
-      
+
       localStorage.setItem("proposals", JSON.stringify(updatedProposals));
       return updatedProposals;
     });
