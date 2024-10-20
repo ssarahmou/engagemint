@@ -45,6 +45,30 @@ const Home: React.FC = () => {
   );
 
   useEffect(() => {
+    // Reset to initial values on each page load
+    setProposals(initialProposals);
+    setVotedProposals({});
+
+    // Store initial values in localStorage
+    localStorage.setItem("proposals", JSON.stringify(initialProposals));
+    localStorage.removeItem("votedProposals");
+
+    // Add event listener for beforeunload
+    const handleBeforeUnload = () => {
+      localStorage.setItem("proposals", JSON.stringify(initialProposals));
+      localStorage.removeItem("votedProposals");
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    // Cleanup function
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []);
+  /*
+  useEffect(() => {
+    
     const storedProposals = localStorage.getItem("proposals");
     const storedVotes = localStorage.getItem("votedProposals");
     if (storedProposals) {
@@ -57,6 +81,7 @@ const Home: React.FC = () => {
       setVotedProposals(JSON.parse(storedVotes));
     }
   }, []);
+  */
 
   const addProposal = useCallback((proposalText: string) => {
     const newProposal: Proposal = {
