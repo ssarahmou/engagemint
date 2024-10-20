@@ -2,11 +2,25 @@
 
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
+import { WagmiProvider } from 'wagmi'
+import { config } from '../lib/config'
+import { Profile } from './profile'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { useAccount, useConnect, useReadContract, useWriteContract } from 'wagmi';
+import { abi } from '../lib/abi'
+import { type UseWriteContractParameters } from 'wagmi'
 
 export default function Home() {
+  const queryClient = new QueryClient()
+
+  const tokenAddress = '0x6ff9dEd9Fb6a95923824e678BFEbd5f32C25a77B'
+
+
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLDivElement>(null);
+
+  const { writeContract } = useWriteContract()
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -24,6 +38,7 @@ export default function Home() {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, []);
+
 
   return (
     <div className="flex flex-row h-screen font-inter-tight">
