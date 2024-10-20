@@ -9,6 +9,22 @@ export default function Home() {
           <div className="w-full h-1/6 bg-gradient-to-l from-[#CCD7FA] to-[#F9F0F8] bg-white p-12 font-semibold text-5xl justify-center flex flex-col">
             Engagemint
           </div>
+          <nav className="bg-blue-600 text-white p-4">
+            <div className="container mx-auto flex justify-between items-center">
+              <Link href="/" className="text-2xl font-bold">
+                Engagemint
+              </Link>
+              <div className="space-x-4">
+                <Link href="/dashboard" className="hover:underline">
+                  Dashboard
+                </Link>
+                <Link href="/proposals" className="hover:underline">
+                  Proposals
+                </Link>
+              </div>
+            </div>
+          </nav>
+
           <div className="ml-12 mt-12 mb-5 underline text-gray-400 flex-col stroke-[D9D9D9]">
           <Link href="/proposals"> 
           Proposals</Link>
