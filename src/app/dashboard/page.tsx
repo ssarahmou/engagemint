@@ -1,4 +1,6 @@
-"use client"
+"use client";
+import Image from 'next/image';
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 import Link from 'next/link';
 import * as React from "react";
@@ -14,6 +16,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+
 
 export function SearchInput() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -42,10 +45,7 @@ export default function Home() {
   const [position, setPosition] = useState('top');
 
   return (
-    // Profile
-    <div className="flex flex-row h-screen font-inter-tight transition-shadow duration-100 ease-in-out">
-
-      {/* Navbar */}
+    <div className="flex min-h-screen">
       <div className="w-[400px] h-screen flex flex-col border-r-[2px] border-slate bg-gradient-to-t from-[#CCD7FA] to-[#F9F0F8] bg-white p-12 overflow-y-auto">
         <div className="font-semibold text-2xl mb-12">
           <Link href="/" className="text-2xl font-bold">
@@ -54,9 +54,8 @@ export default function Home() {
         </div>
         <div className="font-bold text-gray-500 tracking-widest">GENERAL</div>
         <div className="font-semibold text-black mt-5 text-2xl bg-[#FAF7FC] p-6 rounded-xl stroke-[2px] border-slate border-opacity-95">Dashboard</div>
-        <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">Collection</div>
         <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">
-          <Link href="/proposals" className="hover:underline font-semibold">
+          <Link href="/proposals" className="font-semibold">
             Proposals
           </Link>
         </div>
@@ -67,8 +66,7 @@ export default function Home() {
         </Link>
         <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">Settings</div>
       </div>
-    
-      {/* Main Content */}
+      
       <div className="flex-grow p-12 overflow-y-auto">
         <div className="font-semibold p-16 text-2xl w-full flex flex-row items-center">    
           <div>Welcome, Kelly!</div>
@@ -97,6 +95,8 @@ export default function Home() {
     
             
         </div>
+
+
         <div className="pt-8 ml-16 w-11/12">
           <SearchInput />
  

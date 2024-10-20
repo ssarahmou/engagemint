@@ -40,9 +40,8 @@ const Home: React.FC = () => {
         <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">
           <Link href="/dashboard">Dashboard</Link>
         </div>
-        <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">Collection</div>
         <div className="font-semibold text-black mt-5 text-2xl bg-[#FAF7FC] p-6 rounded-xl stroke-[2px] border-slate border-opacity-95">
-          <Link href="/proposals" className="hover:underline font-semibold">
+          <Link href="/proposals" className="font-semibold">
             Proposals
           </Link>
         </div>
