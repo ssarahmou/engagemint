@@ -43,6 +43,7 @@ export default function Home() {
                 {/* First Image */}
                 <div className="relative group">
                   <img 
+                  
                     src="https://i.imgur.com/imp7XE1.png" 
                     alt="AI Chat History 1" 
                     className="h-full w-[400px] rounded-3xl border-gray-100 border-[3px] object-cover transition duration-300 ease-in-out group-hover:opacity-75"
