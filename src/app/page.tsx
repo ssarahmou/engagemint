@@ -86,7 +86,7 @@ export default function Home() {
           <div className="flex-col flex">
             <div className="ml-16 mt-10 mb-3">Collection</div>
             <div className="ml-16 hover:shadow-xl transition-shadow duration-100 w-auto ease-in-out">
-              <img src="https://i.imgur.com/3PgJzpL.png" alt="Collection" />
+              <img src="https://i.imgur.com/WLzjIbV.png" alt="Collection" />
             </div>
           </div>
         </div>

@@ -85,12 +85,12 @@ export default function Home() {
         </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
-        <DropdownMenuLabel>Media Platform</DropdownMenuLabel>
+        <DropdownMenuLabel>Sort and Filter</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
-          <DropdownMenuRadioItem value="Spotify">Spotify</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="ESPN">ESPN</DropdownMenuRadioItem>
-          <DropdownMenuRadioItem value="Netflix">Netflix</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="Popular">Popular</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="Hot">Hot</DropdownMenuRadioItem>
+          <DropdownMenuRadioItem value="New">New</DropdownMenuRadioItem>
         </DropdownMenuRadioGroup>
       </DropdownMenuContent>
     </DropdownMenu>
@@ -99,125 +99,124 @@ export default function Home() {
         </div>
         <div className="pt-8 ml-16 w-11/12">
           <SearchInput />
-        </div>
-        <div className="pt-16 pl-20 font-bold text-gray-400 tracking-widest" >ESPN</div>
-        <div className="pl-16">
-            <img src="https://i.imgur.com/y0RLnx9.png"></img>
-        </div>
+ 
         
         {/* ESPN */}
-        <div className="flex pl-16 pt-6 space-x-8 mr-auto">
+        <div className="flex pl-2 pt-6 space-x-8 mr-auto">
       {/* Card 1 */}
-      <div className="bg-[#FAF7FC] rounded-lg shadow-md p-4 min-w-[300px]">
-        <div className="text-right text-[#6A8CCA] font-bold text-xl">+100 pts</div>
-        <h2 className="mt-2 text-lg font-semibold">NBA Frenzy</h2>
-        <p className="text-sm font-bold tracking-wider text-gray-500">100 GAMES WATCHED ON ESPN</p>
-        <div className="mt-4 bg-gray-200 h-32 rounded-md"></div>
+      <div className="bg-[#fefdff] rounded-lg shadow-md p-4 min-w-[300px]">
+        <div className="text-right text-[#6A8CCA] font-bold text-xl">2B tokens</div>
+        <h2 className="mt-2 text-lg font-semibold">Taylor Swift</h2>
+        <p className="text-sm font-bold tracking-wider text-gray-500">MOST POPULAR ARTIST</p>
+        <div className="mt-4 bg-gray-200 h-32 rounded-md">
+            <img src="https://i.imgur.com/iXH97hN.png"></img>
+        </div>
         <button className="mt-4 w-full bg-[#6A8CCA] text-white py-2 rounded-md hover:bg-blue-700">
-          Redeem Points
+          Learn More
         </button>
       </div>
 
       {/* Card 2 */}
-      <div className="bg-[#FAF7FC] rounded-lg shadow-md p-4 min-w-[300px]">
-        <div className="text-right text-[#6A8CCA] font-bold text-xl">+100 pts</div>
-        <h2 className="mt-2 text-lg font-semibold">MLB Marathon</h2>
-        <p className="text-sm font-bold tracking-wider text-gray-500">100 GAMES WATCHED ON ESPN</p>
-        <div className="mt-4 bg-gray-200 h-32 rounded-md"></div>
+      <div className="bg-[#fefdff] rounded-lg shadow-md p-4 min-w-[300px]">
+        <div className="text-right text-[#6A8CCA] font-bold text-xl">1.7B tokens</div>
+        <h2 className="mt-2 text-lg font-semibold">Olivia Rodrigo</h2>
+        <p className="text-sm font-bold tracking-wider text-gray-500">MOST POPULAR ARIST</p>
+        <div className="mt-4 bg-gray-200 h-32 rounded-md">
+            <img src="https://i.imgur.com/PtxmXgS.png"></img>
+        </div>
         <button className="mt-4 w-full bg-[#6A8CCA] text-white py-2 rounded-md hover:bg-blue-700">
-          Redeem Points
+          Learn More
         </button>
       </div>
 
       {/* Card 3 */}
-      <div className="bg-[#FAF7FC] rounded-lg shadow-md p-4 min-w-[300px]">
-        <div className="text-right text-[#6A8CCA] font-bold text-xl">+100 pts</div>
-        <h2 className="mt-2 text-lg font-semibold">NFL Frenzy</h2>
-        <p className="text-sm font-bold tracking-wider text-gray-500">100 GAMES WATCHED ON ESPN</p>
-        <div className="mt-4 bg-gray-200 h-32 rounded-md"></div>
+      <div className="bg-[#fefdff] rounded-lg shadow-md p-4 min-w-[300px]">
+        <div className="text-right text-[#6A8CCA] font-bold text-xl">1B tokens</div>
+        <h2 className="mt-2 text-lg font-semibold">Bruno Mars</h2>
+        <p className="text-sm font-bold tracking-wider text-gray-500">MOST POPULAR ARTIST</p>
+        <div className="mt-4 bg-gray-200 h-32 rounded-md">
+            <img src="https://i.imgur.com/EwK364V.png"></img>
+        </div>
         <button className="mt-4 w-full bg-[#6A8CCA] text-white py-2 rounded-md hover:bg-blue-700">
-          Redeem Points
+          Learn More
         </button>
       </div>
       
 
                   {/* Card 3 */}
-                  <div className="bg-[#FAF7FC] rounded-lg shadow-md p-4 min-w-[300px]">
-        <div className="text-right text-[#6A8CCA] font-bold text-xl">+100 pts</div>
-        <h2 className="mt-2 text-lg font-semibold">Golf Grand Slam</h2>
-        <p className="text-sm font-bold tracking-wider text-gray-500">100 ROUNDS WATCHED ON ESPN</p>
-        <div className="mt-4 bg-gray-200 h-32 rounded-md"></div>
+                  <div className="bg-[#fefdff] rounded-lg shadow-md p-4 min-w-[300px]">
+        <div className="text-right text-[#6A8CCA] font-bold text-xl">927K tokens</div>
+        <h2 className="mt-2 text-lg font-semibold">Katy Perry</h2>
+        <p className="text-sm font-bold tracking-wider text-gray-500">MOST POPULAR ARTIST</p>
+        <div className="mt-4 bg-gray-200 h-32 rounded-md">
+            <img src="https://i.imgur.com/fmxinXe.png"></img>
+        </div>
         <button className="mt-4 w-full bg-[#6A8CCA] text-white py-2 rounded-md hover:bg-blue-700">
-          Redeem Points
+          Learn More
         </button>
       </div>
 
-                  {/* Card 3 */}
-                  <div className="bg-[#FAF7FC] rounded-lg shadow-md p-4 min-w-[300px]">
-        <div className="text-right text-[#6A8CCA] font-bold text-xl">+100 pts</div>
-        <h2 className="mt-2 text-lg font-semibold">Soccer Showdown</h2>
-        <p className="text-sm font-bold tracking-wider text-gray-500">100 MATCHES WATCHED ON ESPN</p>
-        <div className="mt-4 bg-gray-200 h-32 rounded-md"></div>
-        <button className="mt-4 w-full bg-[#6A8CCA] text-white py-2 rounded-md hover:bg-blue-700">
-          Redeem Points
-        </button>
+ 
       </div>
-      </div>
-      <div className="pt-16 pl-20 font-bold text-gray-400 tracking-widest" >NETFLIX</div>
-        <div className="pl-16 mb-[-10px]">
-            <img src="https://i.imgur.com/sw72kwM.png"></img>
-        </div>
-        
+  
         {/* ESPN */}
-        <div className="flex pl-16 pt-6 space-x-8 mr-auto">
+        <div className="flex pl-2 pt-6 space-x-8 mr-auto">
       {/* Card 1 */}
-      <div className="bg-[#FAF7FC] rounded-lg shadow-md p-4 mb-16 min-w-[300px]">
-        <div className="text-right text-[#6A8CCA] font-bold text-xl">+100 pts</div>
-        <h2 className="mt-2 text-lg font-semibold">Binge-Watching Champion</h2>
-        <p className="text-sm font-bold tracking-wider text-gray-500">100 EPISODES WATCHED ON NETFLIX</p>
-        <div className="mt-4 bg-gray-200 h-32 rounded-md"></div>
+      <div className="bg-[#fefdff] rounded-lg shadow-md p-4 mb-16 min-w-[300px]">
+        <div className="text-right text-[#6A8CCA] font-bold text-xl">862k tokens</div>
+        <h2 className="mt-2 text-lg font-semibold">Travis Scott</h2>
+        <p className="text-sm font-bold tracking-wider text-gray-500">POPULAR RAP</p>
+        <div className="mt-4 bg-gray-200 h-32 rounded-md">
+            <img src="https://i.imgur.com/QxwUoZ1.png"></img>
+        </div>
         <button className="mt-4 w-full bg-[#6A8CCA] text-white py-2 rounded-md hover:bg-blue-700">
-          Redeem Points
+        Learn More
         </button>
       </div>
 
       {/* Card 2 */}
-      <div className="bg-[#FAF7FC] rounded-lg shadow-md p-4 mb-16 min-w-[300px]">
-        <div className="text-right text-[#6A8CCA] font-bold text-xl">+100 pts</div>
-        <h2 className="mt-2 text-lg font-semibold">Series Completionist</h2>
-        <p className="text-sm font-bold tracking-wider text-gray-500">50 SERIES COMPLETED ON NETFLIX</p>
-        <div className="mt-4 bg-gray-200 h-32 rounded-md"></div>
+      <div className="bg-[#fefdff] rounded-lg shadow-md p-4 mb-16 min-w-[300px]">
+        <div className="text-right text-[#6A8CCA] font-bold text-xl">512k tokens</div>
+        <h2 className="mt-2 text-lg font-semibold">Sabrina Carpenter</h2>
+        <p className="text-sm font-bold tracking-wider text-gray-500">POPULAR POP</p>
+        <div className="mt-4 bg-gray-200 h-32 rounded-md">
+            <img src="https://i.imgur.com/KNej5VG.png"></img>
+        </div>
         <button className="mt-4 w-full bg-[#6A8CCA] text-white py-2 rounded-md hover:bg-blue-700">
-          Redeem Points
+        Learn More
         </button>
       </div>
 
       {/* Card 3 */}
-      <div className="bg-[#FAF7FC] rounded-lg shadow-md p-4 min-w-[300px] mb-16">
-        <div className="text-right text-[#6A8CCA] font-bold text-xl">+100 pts</div>
-        <h2 className="mt-2 text-lg font-semibold">Romance Lover</h2>
-        <p className="text-sm font-bold tracking-wider text-gray-500">WATCH 100 ROMANCE MOVIES</p>
-        <div className="mt-4 bg-gray-200 h-32 rounded-md"></div>
+      <div className="bg-[#fefdff] rounded-lg shadow-md p-4 min-w-[300px] mb-16">
+        <div className="text-right text-[#6A8CCA] font-bold text-xl">635k tokens</div>
+        <h2 className="mt-2 text-lg font-semibold">Drake</h2>
+        <p className="text-sm font-bold tracking-wider text-gray-500">POPULAR HIP HOP</p>
+        <div className="mt-4 bg-gray-200 h-32 rounded-md">
+            <img src="https://i.imgur.com/f4vWY2Y.png"></img>
+        </div>
         <button className="mt-4 w-full bg-[#6A8CCA] text-white py-2 rounded-md hover:bg-blue-700">
-          Redeem Points
+        Learn More
         </button>
       </div>
       
 
                   {/* Card 3 */}
-                  <div className="bg-[#FAF7FC] rounded-lg shadow-md min-w-[300px] p-4 mb-16">
-        <div className="text-right text-[#6A8CCA] font-bold text-xl">+100 pts</div>
-        <h2 className="mt-2 text-lg font-semibold">COMEDY CENTRAL</h2>
-        <p className="text-sm font-bold tracking-wider text-gray-500">100 COMEDY SHOWS / MOVIES</p>
-        <div className="mt-4 bg-gray-200 h-32 rounded-md"></div>
+                  <div className="bg-[#fefdff] rounded-lg shadow-md min-w-[300px] p-4 mb-16">
+        <div className="text-right text-[#6A8CCA] font-bold text-xl">263k tokens</div>
+        <h2 className="mt-2 text-lg font-semibold">Daft Punk</h2>
+        <p className="text-sm font-bold tracking-wider text-gray-500">POPULAR HOUSE</p>
+        <div className="mt-4 bg-gray-200 h-32 rounded-md">
+            <img src="https://i.imgur.com/gbE3Em8.png"></img>
+        </div>
         <button className="mt-4 w-full bg-[#6A8CCA] text-white py-2 rounded-md hover:bg-blue-700">
-          Redeem Points
+          Learn More
         </button>
       </div>
 
       
       </div>
-        <div className="pl-16 font-semibold text-xl underline">
+        <div className="pl-6 font-semibold text-xl underline">
         Load More
         </div>
         <div className="pt-16 pl-20 font-bold text-gray-400 tracking-widest" > </div>
@@ -227,6 +226,7 @@ export default function Home() {
 
       </div>
       
+      </div>
       </div>
 
 )
