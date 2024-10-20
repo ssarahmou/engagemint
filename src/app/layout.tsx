@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import { Inter_Tight } from "next/font/google";
 import "./globals.css";
-import { Providers } from './providers';
+import { Providers } from "./providers";
 
 const interTight = Inter_Tight({
-  subsets: ['latin'],
-  variable: '--font-inter-tight',
-  
+  subsets: ["latin"],
+  variable: "--font-inter-tight",
 });
 
 export const metadata: Metadata = {
@@ -21,12 +20,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${interTight.variable} antialiased`}
-      >
-        <Providers>
-            {children}
-        </Providers>
+      <body className={`${interTight.variable} antialiased`}>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
