@@ -18,22 +18,22 @@ interface Proposal {
 const initialProposals: Proposal[] = [
   {
     id: 1,
-    text: "Implement a community garden in the local park",
+    text: "Create a Kali Uchis token",
     votes: { yes: 15, no: 5 }
   },
   {
     id: 2,
-    text: "Organize a monthly neighborhood clean-up event",
+    text: "Create an Olivia Rodrigo token",
     votes: { yes: 20, no: 3 }
   },
   {
     id: 3,
-    text: "Create a youth mentorship program",
+    text: "Create a Gracie Abrams token",
     votes: { yes: 18, no: 7 }
   },
   {
     id: 4,
-    text: "Establish a local farmers market on weekends",
+    text: "Create a Lil Uzi Vert token",
     votes: { yes: 25, no: 2 }
   }
 ];
