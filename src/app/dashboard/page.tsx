@@ -26,16 +26,18 @@ export function SearchInput() {
   return (
     <form
       onSubmit={handleSearch}
-      className="flex w-full items-center space-x-2 "
+      className="flex w-full space-x-2 ml-auto "
     >
+      <div className="flex-grow "></div>
       <Input
         type="text"
-        placeholder="Search for a Engagemint"
+        placeholder="Search for a Engagemint..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        className="flex-grow" // Makes the input take available space
+        className="text-xl flex-grow py-12 rounded-full px-24 bg-gray-100" // Makes the input take available space and increases its thickness
       />
-      <Button type="submit">Search</Button>
+      <img src="https://i.imgur.com/XaJCpJN.png" className="absolute px-12 py-9"></img>
+      <Button type="submit" className="absolute right-40 mt-4 py-8 px-16 rounded-full">Search</Button>
     </form>
   );
 }
@@ -45,9 +47,9 @@ export default function Home() {
 
   return (
     <div className="flex min-h-screen">
-      <div className="w-[400px] h-screen flex flex-col border-r-[2px] border-slate bg-gradient-to-t from-[#CCD7FA] to-[#F9F0F8] bg-white p-12 overflow-y-auto">
+      <div className="w-[400px] h-screen flex flex-col border-r-[2px] border-slate bg-gradient-to-t from-[#CCD7FA] to-[#F9F0F8] bg-white p-12 overflow-y-auto sticky top-0">
         <div className="font-semibold text-2xl mb-12">
-          <Link href="/" className="text-2xl font-bold">
+          <Link href="/profile" className="text-2xl font-bold">
             Engagemint
           </Link>
         </div>
@@ -64,7 +66,7 @@ export default function Home() {
           Notifications
         </div>
         <div className="font-bold text-gray-500 tracking-widest">PERSONAL</div>
-        <Link href="/">
+        <Link href="/profile">
           <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">
             Profile
           </div>
@@ -77,9 +79,9 @@ export default function Home() {
       <div className="flex-grow p-12 overflow-y-auto">
         <div className="font-semibold p-16 text-2xl w-full flex flex-row items-center">
           <div>Welcome, Kelly!</div>
-          <div className="ml-auto bg-[#6585C0] text-white pt-2 pl-8 pr-8 pb-2 rounded-full">
+          <Button variant = "outline" className="ml-auto pt-3 pl-8 pr-8 pb-3 rounded-full">
             15.06 ETH
-          </div>
+          </Button>
         </div>
         <div className="flex flex-row">
           <div className="pt-16 pl-16 mt-30 text-6xl font-semibold">
@@ -87,9 +89,9 @@ export default function Home() {
           </div>
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <div className="pt-16 pl-16 mt-4">
-                <Button variant="ghost" className="">
-                  <img src="https://i.imgur.com/iSSFH8t.png"></img>
+              <div className="pt-16 pl-16 mt-4 ml-2">
+                <Button variant="outline" className="mr-4 text-lg">Filter
+                  <img src="https://i.imgur.com/iSSFH8t.png" className="ml-2"></img>
                 </Button>
               </div>
             </DropdownMenuTrigger>
@@ -112,6 +114,8 @@ export default function Home() {
 
         <div className="pt-8 ml-16 w-11/12">
           <SearchInput />
+
+            <div className="font-bold tracking-widest text-gray-400 mt-12">POPULAR</div>
 
           {/* ESPN */}
           <div className="flex pl-2 pt-6 space-x-8 mr-auto">
@@ -258,7 +262,6 @@ export default function Home() {
           <div className="pt-16 pl-20 font-bold text-gray-400 tracking-widest">
             {" "}
           </div>
-          <div className="pl-16 mb-12 justify-center item-center"></div>
         </div>
       </div>
     </div>

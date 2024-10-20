@@ -140,7 +140,7 @@ const Home: React.FC = () => {
       {/* Navigation Bar */}
       <div className="w-[400px] h-screen flex flex-col border-r-[2px] border-slate bg-gradient-to-t from-[#CCD7FA] to-[#F9F0F8] bg-white p-12 overflow-y-auto">
         <div className="font-semibold text-2xl mb-12">
-          <Link href="/" className="text-2xl font-bold">
+          <Link href="/profile" className="text-2xl font-bold">
             Engagemint
           </Link>
         </div>
@@ -148,9 +148,7 @@ const Home: React.FC = () => {
         <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">
           <Link href="/dashboard">Dashboard</Link>
         </div>
-        <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">
-          Collection
-        </div>
+
         <div className="font-semibold text-black mt-5 text-2xl bg-[#FAF7FC] p-6 rounded-xl stroke-[2px] border-slate border-opacity-95">
           <Link href="/proposals" className="font-semibold">
             Proposals
@@ -160,9 +158,11 @@ const Home: React.FC = () => {
           Notifications
         </div>
         <div className="font-bold text-gray-500 tracking-widest">PERSONAL</div>
-        <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">
-          Profile
-        </div>
+        <Link href="/profile">
+          <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">
+            Profile
+          </div>
+        </Link>
         <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">
           Settings
         </div>
