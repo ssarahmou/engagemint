@@ -5,7 +5,7 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import ProposalForm from "./ProposalForm";
 import ProposalList from "./ProposalList";
-import something  from '../../components/ui/writeContract';
+import Something  from '../../components/ui/writeContract';
 interface Proposal {
   id: number;
   text: string;
@@ -39,7 +39,7 @@ const initialProposals: Proposal[] = [
 ];
 
 const Home: React.FC = () => {
-  const deployNewToken = something();
+  const deployNewToken = Something();
 
 
   const [proposals, setProposals] = useState<Proposal[]>([]);

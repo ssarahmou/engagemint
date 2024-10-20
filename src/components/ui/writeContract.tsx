@@ -3,12 +3,12 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { useAccount, useConnect, useReadContract, useWriteContract } from 'wagmi';
 import { type UseWriteContractParameters } from 'wagmi'
 
-export default function something() {
+export default function Something() {
   const {writeContract} = useWriteContract();
-    
+  console.log("made write contract var")
   const deployToken = async (name: string, ticker: string) => {
     try {
-        const result = await writeContract({ 
+        const result = writeContract({ 
           abi: [
             {
               "anonymous": false,
