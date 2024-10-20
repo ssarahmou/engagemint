@@ -1,18 +1,17 @@
-// components/ProposalForm.tsx
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 interface ProposalFormProps {
   onAddProposal: (proposalText: string) => void;
 }
 
 const ProposalForm: React.FC<ProposalFormProps> = ({ onAddProposal }) => {
-  const [proposal, setProposal] = useState('');
+  const [proposalText, setProposalText] = useState('');
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (proposal.trim()) {
-      onAddProposal(proposal);
-      setProposal('');
+    if (proposalText.trim()) {
+      onAddProposal(proposalText);
+      setProposalText('');
     }
   };
 
@@ -20,10 +19,11 @@ const ProposalForm: React.FC<ProposalFormProps> = ({ onAddProposal }) => {
     <form onSubmit={handleSubmit} className="mb-4">
       <input
         type="text"
-        value={proposal}
-        onChange={(e) => setProposal(e.target.value)}
+        value={proposalText}
+        onChange={(e) => setProposalText(e.target.value)}
         placeholder="Enter your proposal"
         className="border rounded px-4 py-2 mr-2"
+        required
       />
       <button type="submit" className="bg-blue-500 text-white rounded px-4 py-2">
         Create Proposal

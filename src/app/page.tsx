@@ -77,9 +77,7 @@ export default function Home() {
         </div>
         <div className="ml-12 text-6xl font-semibold flex flex-row text-black">
           <Link href="/">Profile</Link>
-          <div className="ml-20 text-gray-400">
-            <Link href="/creator-profile">Creator Profile</Link>
-          </div>
+          
         </div>
 
         <div className="flex flex-row">
