@@ -3,7 +3,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { useAccount, useConnect, useReadContract, useWriteContract } from 'wagmi';
 import { type UseWriteContractParameters } from 'wagmi'
 
-export default function something() {
+export default function something(name: string, ticker: string) {
     const {writeContract} = useWriteContract()
     
         writeContract({ 
@@ -68,8 +68,8 @@ export default function something() {
           address: '0x6b175474e89094c44da98b954eedeac495271d0f',
           functionName: 'deployNewToken',
           args: [
-            'test',
-            'hello',
+            name,
+            ticker,
           ],
        })
       }
