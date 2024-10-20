@@ -5,7 +5,7 @@ import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import ProposalForm from "./ProposalForm";
 import ProposalList from "./ProposalList";
-
+import something from '../../components/ui/writeContract';
 interface Proposal {
   id: number;
   text: string;
@@ -23,7 +23,7 @@ const initialProposals: Proposal[] = [
   },
   {
     id: 2,
-    text: "Create an Olivia Rodrigo token",
+    text: "Create a Lana Del Rey token",
     votes: { yes: 20, no: 3 },
   },
   {
