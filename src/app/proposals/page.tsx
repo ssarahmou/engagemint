@@ -123,7 +123,7 @@ const Home: React.FC = () => {
           
           // Check if total votes exceed 150
           //const totalVotes = updatedProposal.votes.yes + updatedProposal.votes.no;
-          if (updatedProposal.votes.yes > 150) {
+          if (updatedProposal.votes.yes >= 150) {
             // Call the deployNewToken function
             deployNewToken('Katy Perry', 'KP')
               .then(() => console.log('New token deployed successfully'))
