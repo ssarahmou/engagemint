@@ -44,13 +44,22 @@ export default function Home() {
   return (
     // Profile
     <div className="flex flex-row h-screen font-inter-tight transition-shadow duration-100 ease-in-out">
+
       {/* Navbar */}
-      <div className="w-[400px] h-full flex flex-col border-r-[2px] border-slate bg-gradient-to-t from-[#CCD7FA] to-[#F9F0F8] bg-white p-12 fixed ">
-        <div className="font-semibold text-2xl mb-12">Engagemint</div>
+      <div className="w-[400px] h-screen flex flex-col border-r-[2px] border-slate bg-gradient-to-t from-[#CCD7FA] to-[#F9F0F8] bg-white p-12 overflow-y-auto">
+        <div className="font-semibold text-2xl mb-12">
+          <Link href="/" className="text-2xl font-bold">
+            Engagemint
+          </Link>
+        </div>
         <div className="font-bold text-gray-500 tracking-widest">GENERAL</div>
         <div className="font-semibold text-black mt-5 text-2xl bg-[#FAF7FC] p-6 rounded-xl stroke-[2px] border-slate border-opacity-95">Dashboard</div>
         <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">Collection</div>
-        <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">Proposals</div>
+        <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100">
+          <Link href="/proposals" className="hover:underline font-semibold">
+            Proposals
+          </Link>
+        </div>
         <div className="font-semibold text-gray-500 mt-5 text-2xl hover:bg-[#FAF7FC] hover:stroke-[2px] p-6 rounded-xl border-slate border-opacity-100 mb-20">Notifications</div>
         <div className="font-bold text-gray-500 tracking-widest">PERSONAL</div>
         <Link href="/">
@@ -60,7 +69,7 @@ export default function Home() {
       </div>
     
       {/* Main Content */}
-      <div className="flex flex-col flex-grow ml-[400px]">
+      <div className="flex-grow p-12 overflow-y-auto">
         <div className="font-semibold p-16 text-2xl w-full flex flex-row items-center">    
           <div>Welcome, Kelly!</div>
           <div className="ml-auto bg-[#6585C0] text-white pt-2 pl-8 pr-8 pb-2 rounded-full">15.06 ETH</div>
