@@ -24,7 +24,7 @@ const initialProposals: Proposal[] = [
   {
     id: 2,
     text: "Create a Morgan Wallen token",
-    votes: { yes: 50, no: 13 },
+    votes: { yes: 5, no: 2 },
   },
   {
     id: 3,
