@@ -37,17 +37,35 @@ export default function Home() {
                   alt="Img"/>
               </div>
             </div>
-            <div className="flex-col flex ml-8 w-full">
-              <div className="ml-16 mt-10 mb-3"> Your Marketplace</div>
-              <div className="ml-16 transition-shadow duration-100 ease-in-out w-full h-full">
-
-                 {/* Marketplace HEREEE */}
-                <div className="h-full w-[400px] rounded-3xl border-gray-100 border-[3px]">
-
-
+            <div className="flex-row flex ml-8 w-full">
+              <div className="ml-16 mt-10 mb-3"> Browse other Creators</div>
+              <div className="ml-16 transition-shadow duration-100 ease-in-out w-full h-full flex">
+                {/* First Image */}
+                <div className="relative group">
+                  <img 
+                    src="https://i.imgur.com/imp7XE1.png" 
+                    alt="AI Chat History 1" 
+                    className="h-full w-[400px] rounded-3xl border-gray-100 border-[3px] object-cover transition duration-300 ease-in-out group-hover:opacity-75"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+                    <span className="text-white text-lg font-semibold">Bronze Bruno Mars Fan</span>
+                  </div>
                 </div>
-                
+
+                {/* Second Image */}
+                <div className="relative group">
+                  <img 
+                    src="https://i.imgur.com/Q309eMP.png" 
+                    alt="AI Chat History 2" 
+                    className="h-full w-[400px] rounded-3xl border-gray-100 border-[3px] object-cover transition duration-300 ease-in-out group-hover:opacity-75"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
+                    <span className="text-white text-lg font-semibold">Platinum Taylor Swift Fan</span>
+                  </div>
+                </div>
               </div>
+              
+              
             </div>
           </div>
             </div>
