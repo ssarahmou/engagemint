@@ -23,7 +23,7 @@ const initialProposals: Proposal[] = [
   },
   {
     id: 2,
-    text: "Create an Olivia Rodrigo token",
+    text: "Create a Lana Del Rey token",
     votes: { yes: 20, no: 3 },
   },
   {
